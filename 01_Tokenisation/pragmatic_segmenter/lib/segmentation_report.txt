@@ -1,0 +1,27 @@
+Report
+
+Segmenters were tested with Faroese. 
+
+############### TEST 1 - PunktSentenceTokenizer #############
+100 lines of Faroese Wikipedia saved as wiki100.txt
+
+Initial test run on wiki100.txt using Norwegian pickle, without cleaning newline characters from the original text.
+
+End result: 126 sentences
+
+############## TEST 2 - Return of the PunktSentenceTokenizer ###########
+100 lines of Faroese Wikipedia saved as wiki100.txt
+
+Ran subsequent text using Norwegian pickle after cleaning the text of newline characters
+
+End result: 126 sentences
+
+########## TEST 3 - The PunktSentenceTokenizer Strikes Back ############
+Same base text: 100 lines of Faroese Wikipedia
+
+Ran test using Danish pickle without cleaning newline characters
+
+End result: 126 sentences
+
+######## TEST 4 - Ruby Sementer #################
+
