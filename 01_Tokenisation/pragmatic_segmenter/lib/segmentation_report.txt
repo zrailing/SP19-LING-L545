@@ -23,5 +23,17 @@ Ran test using Danish pickle without cleaning newline characters
 
 End result: 126 sentences
 
-######## TEST 4 - Ruby Sementer #################
+######## TEST 4 - Ruby Segmenter #################
+Ran test on base 100 lines of Faroese Wikipedia. 
+
+Language was set as English. 
+
+Output of the Ruby segmenter was output to a text file, and the number of lines was counted using Python. 
+
+End result: 165 sentences
+
+Mistakes:
+  * One mistake that was observed is that some dates end up being split by the segmenter, especially when in the format dd. month yyyy. This occured several different occasions. However, when the dat expression was contained inside other punctuation like parentheses, the parentheses took precedence over the period, thus not breaking up the date. 
+Ex: (1) δMenningarmálaráðharrin Christian Friis Bach boðaði frá hin 21.
+        (2) november 2013, at hann gavst sum ráðharri.
 
