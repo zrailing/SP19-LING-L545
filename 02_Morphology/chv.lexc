@@ -1,10 +1,32 @@
 Multichar_Symbols
 
-%<n%>                ! Имя существительное
+%<n%>                ! Имя существительное - Noun
+%<pl%>               ! Множественное число - Plural
+
+%>                   ! Граница морфемы - Morpheme boundary
+
+%{A%}		!Archimorpheme -- Instrumental Case
 
 LEXICON Root
 
-урам%<n%>:урам # ;   ! "улица"
-пахча%<n%>:пахча #; ! "сад, garden"
-хула%<n%>:хула #; ! "город, city"
-канаш%<n%>:канаш #; ! "совет, council"
+Nouns ; 
+
+LEXICON CASES 
+
+%<ins%>:%>п%{A%} # ;
+
+LEXICON PLURAL
+
+             CASES  ; 
+%<pl%>:%>сем CASES  ;
+
+LEXICON N 
+
+%<n%>: PLURAL ;
+
+LEXICON Nouns
+
+урам:урам N ;     ! "улица"
+пакча:пакча N ;   ! "сад"
+хула:хула N ;     ! "город"
+канаш:канаш N ;   ! "совет"
