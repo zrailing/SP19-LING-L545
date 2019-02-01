@@ -2,10 +2,15 @@ Multichar_Symbols
 
 %<n%>                ! Имя существительное - Noun
 %<pl%>               ! Множественное число - Plural
+%<nom%>	 ! Nominative case
+%<ins%>		! Instrumental case
+%<gen%>		!Genitive case
 
 %>                   ! Граница морфемы - Morpheme boundary
 
-%{A%}		!Archimorpheme -- Instrumental Case
+%{A%}		!Archimorpheme [a] or [e]
+%{м%}		!Archimorpheme [m] or 0
+%{Ă%}		!Archimorpheme for ӑ or ӗ 
 
 LEXICON Root
 
@@ -14,11 +19,12 @@ Nouns ;
 LEXICON CASES 
 
 %<ins%>:%>п%{A%} # ;
+%<gen%>:%>%{Ă%}н #;
 
 LEXICON PLURAL
 
              CASES  ; 
-%<pl%>:%>сем CASES  ;
+%<pl%>:%>се%{м%} CASES  ;
 
 LEXICON N 
 

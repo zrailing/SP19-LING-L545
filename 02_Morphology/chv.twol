@@ -1,7 +1,9 @@
 Alphabet
   а ӑ е ё ӗ и о у ӳ ы э ю я б в г д ж з к л м н п р с ҫ т ф х ц ч ш щ й ь ъ
   А Ӑ Е Ё Ӗ И О У Ӳ Ы Э Ю Я Б В Г Д Ж З К Л М Н П Р С Ҫ Т Ф Х Ц Ч Ш Щ Й Ь Ъ 
- %{A%}:а %{A%}:е
+ %{A%}:а %{A%}:е 
+ %{Ă%}:ӑ  %{Ă%}:ӗ %{Ă%}:0 
+ %{м%}:м %{м%}:0
 ;
 
 
@@ -13,6 +15,8 @@ FrontVow = ӗ э и ӳ ;
 
 Cns = б в г д ж з к л м н п р с ҫ т ф х ц ч ш щ й ь ъ ; 
 
+ArchiCns = %{м%} ;
+
 Rules 
 
 "Remove morpheme boundary"
@@ -20,3 +24,14 @@ Rules
 
 "Back vowel harmony for archiphoneme {A}"
 %{A%}:а <=> BackVow: [ Cns: | %>: ]+ _ ; 
+
+"Non surface {Ă} in plural genitive"
+%{Ă%}:0 <=> %{м%}: %>: _ н ; 
+
+"Back vowel harmony for archiphoneme {Ă}"
+%{Ă%}:ӑ <=> BackVow: [ ArchiCns: | Cns: | %>: ]+ _ ;
+	except
+                                     %{м%}: %>:  _ н ; 
+
+"Non surface {м} when following %{Ă%}: followed by н"
+%{м%}:0 <=> _ %>:  %{Ă%}: н ;
