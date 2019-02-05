@@ -1,0 +1,47 @@
+Multichar_Symbols
+
+%<v%>                ! Глагол, Verb
+%<tv%>               ! Переходный, Transitive
+%<aor%>              ! Аорист, Aorist
+%<m%>                ! Мужский род, Masculine
+%<f%>                ! Женский род, Feminine
+%<nt%>               ! Средный род, Neuter
+%<pl%>               ! Множественное число, Plural
+
+%[+в%]               ! Префикс в-, Prefix v-
+%[+й%]               ! Префикс й-, Prefix j-
+%[+б%]               ! Префикс б-, Prefix b-
+%[+р%]               ! Префикс р-, Prefix r-
+
+%[+msc%]             ! Согласование мужского рода, Masculine agreement
+%[+fem%]             ! Согласование женского рода, Feminine agreement
+%[+neu%]             ! Согласование средного рода, Neuter agreement
+%[+plu%]             ! Согласование множественного падежа, Plural agreement
+
+%>                   ! Граница морфемы, Morpheme boundary
+
+LEXICON Root
+
+Prefixes ;
+
+LEXICON Prefixes
+
+%[+в%]:в%< Verbs ;
+%[+й%]:й Verbs ;
+%[+б%]:б Verbs ;
+%[+р%]:р Verbs ;
+
+LEXICON AGR
+
+%<m%>%[%+msc%]: # ;
+%<f%>%[%+fem%]: # ;
+%<nt%>%[%+neu%]: # ;
+%<pl%>%[%+plu%]: # ;
+
+LEXICON V-TV
+
+%<v%>%<tv%>%<aor%>:%>уна AGR ;
+
+LEXICON Verbs
+
+бицине:иц V-TV ; ! "говорить", "say"
