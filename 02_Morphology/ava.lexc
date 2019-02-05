@@ -8,17 +8,15 @@ Multichar_Symbols
 %<nt%>               ! Средный род, Neuter
 %<pl%>               ! Множественное число, Plural
 
-%[+в%]               ! Префикс в-, Prefix v-
-%[+й%]               ! Префикс й-, Prefix j-
-%[+б%]               ! Префикс б-, Prefix b-
-%[+р%]               ! Префикс р-, Prefix r-
+@P.Gender.Msc@       ! Согласование мужского рода, Masculine agreement
+@P.Gender.Fem@       ! Согласование женского рода, Feminine agreement
+@P.Gender.Neu@       ! Согласование средного рода, Neuter agreement
+@P.Gender.Plu@       ! Согласование множественного падежа, Plural agreement
 
-%[+msc%]             ! Согласование мужского рода, Masculine agreement
-%[+fem%]             ! Согласование женского рода, Feminine agreement
-%[+neu%]             ! Согласование средного рода, Neuter agreement
-%[+plu%]             ! Согласование множественного падежа, Plural agreement
-
-%>                   ! Граница морфемы, Morpheme boundary
+@R.Gender.Msc@       ! Согласование мужского рода
+@R.Gender.Fem@       ! Согласование женского рода
+@R.Gender.Neu@       ! Согласование средного рода
+@R.Gender.Plu@       ! Согласование множественного падежа
 
 LEXICON Root
 
@@ -26,17 +24,17 @@ Prefixes ;
 
 LEXICON Prefixes
 
-%[+в%]:в Verbs ; !Removed %< after B
-%[+й%]:й Verbs ;
-%[+б%]:б Verbs ;
-%[+р%]:р Verbs ;
+@P.Gender.Msc@:@P.Gender.Msc@в Verbs ;
+@P.Gender.Fem@:@P.Gender.Fem@й Verbs ;
+@P.Gender.Neu@:@P.Gender.Neu@б Verbs ;
+@P.Gender.Plu@:@P.Gender.Plu@р Verbs ;
 
 LEXICON AGR
 
-%<m%>%[%+msc%]: # ;
-%<f%>%[%+fem%]: # ;
-%<nt%>%[%+neu%]: # ;
-%<pl%>%[%+plu%]: # ;
+@R.Gender.Msc@%<m%>:@R.Gender.Msc@ # ;
+@R.Gender.Fem@%<f%>:@R.Gender.Fem@ # ;
+@R.Gender.Neu@%<nt%>:@R.Gender.Neu@ # ;
+@R.Gender.Plu@%<pl%>:@R.Gender.Plu@ # ;
 
 LEXICON V-TV
 
