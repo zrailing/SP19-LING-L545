@@ -26,7 +26,7 @@ Prefixes ;
 
 LEXICON Prefixes
 
-%[+в%]:в%< Verbs ;
+%[+в%]:в Verbs ; !Removed %< after B
 %[+й%]:й Verbs ;
 %[+б%]:б Verbs ;
 %[+р%]:р Verbs ;
