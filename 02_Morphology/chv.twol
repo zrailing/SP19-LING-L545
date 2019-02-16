@@ -12,7 +12,7 @@ Alphabet
 
 Sets 
 
-BackVow = ӑ а ы о у я ё ю ;
+BackVow = ӑ а ы о у я ё ю %{ъ%} ;
 
 FrontVow = ӗ э и ӳ е  ; 
 
