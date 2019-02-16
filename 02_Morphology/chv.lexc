@@ -24,7 +24,7 @@ Multichar_Symbols
 
 LEXICON Root
 
-Nouns ; 
+Guesser ; 
 
 LEXICON CASES 
 
@@ -85,6 +85,10 @@ LEXICON N
 
 %<n%>: SUBST ;
 %<n%>: DER-N ; 
+
+LEXICON Guesser
+
+🂡%<guess%>:🂡 N ;
 
 LEXICON Nouns
 
