@@ -12,4 +12,9 @@ When evaluated with the CoNLL-2017 evaluation script, the resulting precision pe
 ##Tagger 2: MarMot tagger
 The second POS tagger I chose to put to the test with Finnish was the [MarMot tagger](http://cistern.cis.lmu.de/marmot/) by way of a [fork](https://github.com/ftyers/cistern) of the project that allows for native conllu format support. 
 
-##Tagger 3:
+##Tagger 3: Perceptron Tagger
+The third tagger I chose to test was the Perceptron tagger. 
+
+In the training stage, the perceptron tagger ran through 5 iterations (numbered 0 to 4). At the end of these, the final accuracy was 96.83%.
+
+When the tagger was evaluated, it's precision was shown to be 90.26%. 
