@@ -1,0 +1,49 @@
+Multichar_Symbols
+
+%<v%>		! Verb
+%<tv%>		! Transitive
+%<perf%>	! Perfective aspect
+
+%<o_sg1%>	! Object 1st person singular
+%<o_sg2%>	! Object 2nd person singular
+%<o_sg3%>	! Object 3rd person singluar
+%<o_pl1%>	! Object 1st person plural
+%<o_pl2%>	! Object 2nd person plural
+%<o_pl3%>	! Object 3rd person plural
+
+%<s_sg1%>	! Subject 1st person singular
+%<s_sg2%>	! Subject 2nd person singular
+%<s_sg3%>	! Subject 3rd person singular
+%<s_pl1%>	! Subject 1st person plural
+%<s_pl2%>	! Subject 2nd person plural
+%<s_pl3%>	! Subject 3rd person plural
+
+LEXICON Root
+
+V-TV ;
+
+LEXICON Object
+@O.S.1@:@O.S.1@in Subject ;
+@O.S.2@:@O.S.2@at Subject ;
+@O.S.3@:@O.S.3@ Subject ;
+@O.Pl.1@:@O.Pl.1@oj Subject ;
+@O.Pl.2@:@O.Pl.2@ix Subject ;
+@O.Pl.3@:@O.Pl.3@e Subject ;
+
+LEXICON Subject
+
+@S.S.1@:@S.S.1@nu Verbs ;
+@S.S.2@:@S.S.2@a Verbs ;
+@S.S.3@:@S.S.3@ru Verbs ;
+@S.Pl.1@:@S.Pl.1@qa Verbs ;
+@S.Pl.2@:@S.Pl.2@i Verbs ;
+@S.Pl.3@:@S.Pl.3@ki Verbs ;
+
+LEXICON V-TV
+
+%<v%>%<tv%>%<perf%>:x Object ;
+ 
+
+LEXICON Verbs
+
+tzʼät:tzʼät #; ! "to see"

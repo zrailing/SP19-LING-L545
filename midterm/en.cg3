@@ -1,0 +1,38 @@
+DELIMITERS = "." ;
+
+LIST DET = DET ;
+LIST PRON = PRON ;
+LIST PUNCT = PUNCT ;
+LIST NOUN = NOUN ;
+LIST VERB = VERB ;
+LIST Past = Tense=Past ;
+LIST Part = VerbForm=Part ; 
+LIST AUX = AUX ;
+LIST ADV = ADV ;
+LIST ADJ = ADJ ;
+
+SECTION
+
+REMOVE NOUN IF 
+		(0 NOUN)
+		(0 ADJ )
+		(1 NOUN);
+
+REMOVE AUX IF 
+		(0 AUX)
+		(0 VERB)
+		(1 Past)
+		(1 Part)
+		(1 VERB) ;
+
+SELECT DET IF 
+		(0 DET)
+		(0 PRON)
+		(1 ADV)
+		(1 NOUN) ; 
+
+REMOVE VERB IF
+	(0 VERB)
+	(0 NOUN)
+	(-1 ADJ)
+	(1 VERB) ;
